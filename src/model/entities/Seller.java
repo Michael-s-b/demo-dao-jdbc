@@ -14,6 +14,9 @@ public class Seller implements Serializable {
     private Double BaseSalary;
     private Department Department;
 
+    public Seller() {
+    }
+
     public Seller(Integer Id, String Name, String Email, Date BirthDate, Double BaseSalary, Department Department)
             throws ParseException {
         this.Id = Id;
