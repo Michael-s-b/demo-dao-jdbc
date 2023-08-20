@@ -1,14 +1,14 @@
 package application;
 
-import java.util.Date;
-
-import model.entities.Department;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Seller;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Department department = new Department(1, "Books");
-        Seller seller = new Seller(1, "Bob", "Bob@gmail.com", new Date(), 3000.0, department);
+        SellerDao sellerDao = DaoFactory.createSellerDao();
+        System.out.println("\n=== TEST 1: seller findById ===");
+        Seller seller = sellerDao.findById(5);
         System.out.println(seller);
     }
 }
