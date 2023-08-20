@@ -19,6 +19,10 @@ public class App2 {
         Department newDepartment = new Department(null, "Music");
         departmentDao.insert(newDepartment);
         System.out.println("Inserted! New id = " + newDepartment.getId());
+        /////////////////////////////////////////////////
+        System.out.println("\n=== TEST 4: department deleteById ===");
+        departmentDao.deleteById(newDepartment.getId());
+        System.out.println("Delete complete");
 
     }
 }
