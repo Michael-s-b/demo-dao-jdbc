@@ -23,6 +23,12 @@ public class App2 {
         System.out.println("\n=== TEST 4: department deleteById ===");
         departmentDao.deleteById(newDepartment.getId());
         System.out.println("Delete complete");
+        /////////////////////////////////////////////////
+        System.out.println("\n=== TEST 5: department update ===");
+        department = departmentDao.findById(1);
+        department.setName("Food");
+        departmentDao.update(department);
+        System.out.println("Update complete");
 
     }
 }
